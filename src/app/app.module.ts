@@ -7,6 +7,8 @@ import { HttpModule } from '@angular/http';
 import { MdButtonModule, MdCheckboxModule } from '@angular/material';
 import 'hammerjs';
 
+import { DashboardModule } from './dashboard/dashboard.module';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -21,6 +23,7 @@ import { AppComponent } from './app.component';
     HttpModule,
     MdButtonModule,
     MdCheckboxModule,
+    DashboardModule,
     AppRoutingModule
   ],
   providers: [],

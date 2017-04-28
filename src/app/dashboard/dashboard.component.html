@@ -1,0 +1,42 @@
+<md-sidenav-container [class.m2app-dark]="isDarkTheme">
+
+  <md-sidenav #sidenav mode="side" class="app-sidenav">
+    ConfRoom
+    <button md-raised-button (click)="authService.login()">
+      <!-- <img width="30" src="google-logo.png" /> -->
+      <i class="fa fa-sign-in" aria-hidden="true"></i> Login
+    </button>
+    <button md-raised-button (click)="authService.logout()">
+      <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+    </button>
+  </md-sidenav>
+
+  <md-toolbar color="primary">
+    <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+
+    {{title}}
+
+    <span class="app-toolbar-filler"></span>
+    <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
+    <button md-button><i class="fa fa-search" aria-hidden="true"></i></button>
+    <button md-button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+  </md-toolbar>
+
+  <div class="app-content">
+   
+    
+
+    <p>
+      dashboard works!
+    </p>
+
+  </div>
+
+</md-sidenav-container>
+
+
+<span class="app-action" [class.m2app-dark]="isDarkTheme">
+  <button md-fab><md-icon>check circle</md-icon></button>
+</span>
