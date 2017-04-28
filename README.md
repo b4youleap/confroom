@@ -1,6 +1,10 @@
 # Confroom
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1. Further information about the project below.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
+and...
+Angular Material 2.0.0-beta.3  
+
+Further information about the project below.
 
 ## Development server
 
@@ -29,4 +33,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # About this project
 
-This is a potential Hackathon project.
+This is a potential Hackathon starter project.
