@@ -9,6 +9,8 @@ import {
 } from '@angular/material';
 import 'hammerjs';
 
+import { SharedModule } from '../shared/shared.module';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import 'hammerjs';
     MdCheckboxModule,
     MdSidenavModule,
     MdToolbarModule,
-    MdIconModule
+    MdIconModule,
+    SharedModule
   ],
   declarations: [DashboardComponent]
 })
