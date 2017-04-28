@@ -5,11 +5,11 @@ import { DashboardComponent } from './dashboard.component';
 
 import { 
   MdButtonModule, MdCheckboxModule, MdSidenavModule,
-  MdToolbarModule, MdIconModule 
+  MdToolbarModule, MdIconModule, MdMenuModule 
 } from '@angular/material';
 import 'hammerjs';
 
-import { SharedModule } from '../shared/shared.module';
+// import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -20,7 +20,8 @@ import { SharedModule } from '../shared/shared.module';
     MdSidenavModule,
     MdToolbarModule,
     MdIconModule,
-    SharedModule
+    MdMenuModule,
+    // SharedModule
   ],
   declarations: [DashboardComponent]
 })

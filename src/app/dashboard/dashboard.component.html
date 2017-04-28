@@ -4,10 +4,10 @@
     ConfRoom
     <button md-raised-button (click)="authService.login()">
       <!-- <img width="30" src="google-logo.png" /> -->
-      <i class="fa fa-sign-in" aria-hidden="true"></i> Login
+      <!-- <i class="fa fa-sign-in" aria-hidden="true"></i> --> Login
     </button>
     <button md-raised-button (click)="authService.logout()">
-      <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+      <!-- <i class="fa fa-sign-out" aria-hidden="true"></i> --> Logout
     </button>
   </md-sidenav>
 
@@ -20,8 +20,19 @@
 
     <span class="app-toolbar-filler"></span>
     <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
-    <button md-button><i class="fa fa-search" aria-hidden="true"></i></button>
-    <button md-button><i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+    <button md-button><i class="material-icons">search</i></button>
+    <button md-button><i class="material-icons">more vert</i></button>
+    <!-- <button class="user-button" md-button [mdMenuTriggerFor]="menu"> -->
+    <button class="user-button" md-button>
+      <!-- <div fxLayout="row" fxLayoutAlign="start center"> -->
+      <div>
+        <!-- <img src="assets/img/avatars/noavatar.png" class="avatar-flex"/> -->
+        <!-- <span fxHide="true" fxHide.gt-sm="false" style="font-weight: 500; margin-left: 5px;">David Smith</span> -->
+        <span style="font-weight: 500; margin-left: 5px;">Bruce MacDonald</span>
+        <!-- <md-icon fxHide="true" fxHide.gt-sm="false">keyboard_arrow_down</md-icon> -->
+        <md-icon>keyboard_arrow_down</md-icon>
+      </div>
+    </button>
   </md-toolbar>
 
   <div class="app-content">
