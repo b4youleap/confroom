@@ -2,11 +2,11 @@
 
   <md-sidenav #sidenav mode="side" class="app-sidenav">
     ConfRoom
-    <button md-raised-button (click)="authService.login()">
+    <button *ngIf="!isLoggedIn" md-raised-button (click)="login()">
       <!-- <img width="30" src="google-logo.png" /> -->
       <!-- <i class="fa fa-sign-in" aria-hidden="true"></i> --> Login
     </button>
-    <button md-raised-button (click)="authService.logout()">
+    <button *ngIf="isLoggedIn" md-raised-button (click)="logout()">
       <!-- <i class="fa fa-sign-out" aria-hidden="true"></i> --> Logout
     </button>
   </md-sidenav>
@@ -21,9 +21,9 @@
     <span class="app-toolbar-filler"></span>
     <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
     <button md-button><i class="material-icons">search</i></button>
-    <button md-button><i class="material-icons">more vert</i></button>
+    <button md-button><i class="material-icons">more_vert</i></button>
     <!-- <button class="user-button" md-button [mdMenuTriggerFor]="menu"> -->
-    <button class="user-button" md-button>
+    <button  *ngIf="isLoggedIn" [mdMenuTriggerFor]="userActions" class="user-button" md-button>
       <!-- <div fxLayout="row" fxLayoutAlign="start center"> -->
       <div>
         <!-- <img src="assets/img/avatars/noavatar.png" class="avatar-flex"/> -->
@@ -33,6 +33,20 @@
         <md-icon>keyboard_arrow_down</md-icon>
       </div>
     </button>
+    <md-menu #userActions="mdMenu">
+      <button md-menu-item>
+        <md-icon>account_circle</md-icon>
+        <span> Profile </span>
+      </button>
+      <button md-menu-item>
+        <md-icon>room</md-icon>
+        <span> My Location </span>
+      </button>
+      <button md-menu-item (click)="logout()">
+        <md-icon>settings</md-icon>
+        <span> Logout </span>
+      </button>
+    </md-menu>
   </md-toolbar>
 
   <div class="app-content">
