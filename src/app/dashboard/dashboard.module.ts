@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard.component';
 
 import { 
   MdButtonModule, MdCheckboxModule, MdSidenavModule,
-  MdToolbarModule, MdIconModule, MdMenuModule 
+  MdToolbarModule, MdIconModule, MdMenuModule,
 } from '@angular/material';
 import 'hammerjs';
 
